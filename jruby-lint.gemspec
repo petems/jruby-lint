@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "term-ansicolor"
   s.add_dependency "jruby-openssl"
-  s.add_dependency "nokogiri", ">= 1.5.0.beta.4"
+  s.add_dependency "nokogiri", "~> 1.6.0"
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", ">= 2.5"
   s.add_development_dependency "rspec-given"
