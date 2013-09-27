@@ -35,13 +35,13 @@ describe JRuby::Lint::Project do
     Given(:collector1) do
       double("collector 1").tap do |c1|
         c1.should_receive(:run)
-        c1.stub!(:findings).and_return [double("finding 1")]
+        c1.stub(:findings).and_return [double("finding 1")]
       end
     end
     Given(:collector2) do
       double("collector 2").tap do |c2|
         c2.should_receive(:run)
-        c2.stub!(:findings).and_return [double("finding 2")]
+        c2.stub(:findings).and_return [double("finding 2")]
       end
     end
 
@@ -57,7 +57,7 @@ describe JRuby::Lint::Project do
     Given(:collector) do
       double("collector").tap do |c|
         c.should_receive(:run)
-        c.stub!(:findings).and_return [finding]
+        c.stub(:findings).and_return [finding]
       end
     end
 
@@ -68,7 +68,7 @@ describe JRuby::Lint::Project do
     end
 
     When do
-      reporter.stub!(:print_report)
+      reporter.stub(:print_report)
       reporter.should_receive(:print_report).with([finding])
     end
 
@@ -83,7 +83,7 @@ describe JRuby::Lint::Project do
   context 'initializing' do
     Given(:options) { OpenStruct.new }
     Given(:project) { in_current_dir { JRuby::Lint::Project.new(options) } }
-    When { STDOUT.stub!(:tty?).and_return(false) }
+    When { STDOUT.stub(:tty?).and_return(false) }
 
     context 'tags' do
       Given(:options) { OpenStruct.new(:tags => ["debug"]) }

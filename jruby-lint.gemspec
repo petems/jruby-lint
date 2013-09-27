@@ -32,13 +32,13 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", ">= 2.5"
   s.add_development_dependency "rspec-given"
   s.add_development_dependency "aruba"
-  
+
   s.add_development_dependency "childprocess"
   s.add_development_dependency "guard"
   s.add_development_dependency "guard-rspec"
   s.add_development_dependency "growl"
   s.add_development_dependency "rb-fsevent"
-  s.add_development_dependency "rcov"
+  s.add_development_dependency "simplecov"
 end
 
 # Local Variables:
